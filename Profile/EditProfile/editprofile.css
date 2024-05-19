@@ -1,0 +1,348 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background-image: url("http://127.0.0.1:5500/Images/backgroundImage.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  background-color: #09191f;
+  flex-direction: row;
+  height: 4%;
+  width: 100vw;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  opacity: 0.9;
+  justify-content: space-evenly;
+  align-content: center;
+  z-index: 20000;
+}
+
+.nav-logo-main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-menu {
+  position: absolute;
+  font-size: 2rem;
+  color: #F2F2F2;
+  left: 4%;
+  height: 40%;
+}
+
+.open-menu:hover {
+  cursor: pointer;
+}
+
+.logo-main {
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-main:hover {
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.nav-button {
+  border: none;
+  background-color: #09191f;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #F2F2F2;
+}
+
+.nav-button:hover {
+  color: #0074ff;
+  cursor: pointer;
+}
+
+.nav-clone {
+  background-color: #09191f;
+  height: 4%;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  background-color: #0093cb;
+  transition: 0.5s;
+}
+
+.menu {
+  display: block;
+  transition: 0.3s;
+}
+
+.menu .close-menu {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-left: 10%;
+  text-decoration: none;
+  color: #F2F2F2;
+}
+
+.close-menu {
+  font-size: 2rem;
+  margin-top: 3%;
+  margin-right: 0.5%;
+}
+
+.apps-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  opacity: 0.8;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background: none;
+  color: black;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 5%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 5%;
+  border-bottom: 1px solid black;
+}
+
+.menu-btn:hover {
+  color: #09191f;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 95vw;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+.botton-margin {
+  height: 10%;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.profile-picture {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.indicator {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  color: black;
+  font-weight: 500;
+}
+
+#profilePictureInput {
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.all-descriptions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 5% 5% 5% 5%;
+  text-align: left;
+  color: #A4A5A6;
+}
+
+.picture-name {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.name-username {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.name, .username {
+  margin: 0;
+}
+
+.name {
+  color: #0D0D0D;
+}
+
+.username {
+  color: #737373;
+  margin-bottom: 2%;
+}
+
+input, select {
+  border: 1px solid #ccc;
+  padding: 0.5%;
+}
+
+.save-changes {
+  display: flex;
+  width: 25%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 1%;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: #0074ff;
+  justify-content: center;
+  align-items: center;
+}
+
+.save-changes:hover {
+  background-color: #004191;
+  cursor: pointer;
+}
+
+.email, .birthdate {
+  margin: 0;
+}
+
+@media (min-width: 500px) {
+  .nav-clone {
+    background-color: #09191f;
+    height: 3%;
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .nav-bar {
+    display: flex;
+    background-color: #09191f;
+    flex-direction: row;
+    height: 3%;
+    width: 100vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: center;
+  }
+
+  .nav-logo-main, .nav-open-menu {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+  }
+
+  .logo-main {
+    height: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .logo-main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .content {
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 147, 203, 0.65);
+    padding: 0;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .content-right {
+    width: 100%;
+    background-color: #F2F2F2;
+  }
+}

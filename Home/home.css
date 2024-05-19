@@ -1,0 +1,359 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background-color: #F2F2F2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  background-color: #09191f;
+  flex-direction: row;
+  height: 4%;
+  width: 100vw;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  opacity: 0.9;
+  justify-content: space-evenly;
+  align-content: center;
+  z-index: 20000;
+}
+
+.nav-logo-main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-menu {
+  position: absolute;
+  font-size: 2rem;
+  color: #F2F2F2;
+  left: 4%;
+  height: 40%;
+}
+
+.open-menu:hover {
+  cursor: pointer;
+}
+
+.logo-main {
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-main:hover {
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.nav-button {
+  border: none;
+  background-color: #09191f;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #F2F2F2;
+}
+
+.nav-button:hover {
+  color: #0074ff;
+  cursor: pointer;
+}
+
+.nav-clone {
+  background-color: #09191f;
+  height: 4%;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  background-color: #F2F2F2;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.menu {
+  display: block;
+  transition: 0.3s;
+}
+
+.menu .close-menu {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-left: 10%;
+  text-decoration: none;
+  color: #09191f;
+}
+
+.close-menu {
+  font-size: 2rem;
+  margin-top: 3%;
+  margin-right: 0.5%;
+  z-index: 1000;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  opacity: 0.8;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background: none;
+  color: black;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 5%;
+}
+
+.login-btn {
+  margin-top: 10%;
+}
+
+.menu-btn:hover {
+  color: #09191f;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.main-ad {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
+  width: 90vw;
+  height: 80vh;
+  margin: 3% 5% 3% 5%;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.main-ad:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.main-ad-img {
+  height: 80vh;
+  width: 90vw;
+  border-radius: 20px;
+  background-image: url("https://miro.medium.com/v2/resize:fit:1200/1*2vOK7SSRpUTg9_mzATsy0A@2x.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sub-ads {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.on-action-h1 {
+  font-size: 4rem;
+  margin: 3%;
+}
+
+.all-sub-ads {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80vh;
+  margin: 3% 5% 3% 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 5%;
+  background-color: #D9D9D9;
+  box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: start;
+}
+
+.sub:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.sub h1 {
+  width: 90%;
+  margin: 5%;
+  text-align: left;
+  color: #0D0D0D;
+}
+
+.sub p {
+  width: 90%;
+  margin: 5%;
+  text-align: left;
+  color: #737373;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.sub-ad-img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px 20px 0 0;
+}
+
+.sub-img1 {
+  background-image: url("https://i.ibb.co/5r1Yx51/OWINIS1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sub-img2 {
+  background-image: url("https://i.ibb.co/qDKFH7J/76354.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sub-img3 {
+  background-image: url("https://thepointsguy.global.ssl.fastly.net/us/originals/2022/07/Times-Square-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 500px) {
+  .nav-clone {
+    background-color: #09191f;
+    height: 3%;
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .nav-bar {
+    display: flex;
+    background-color: #09191f;
+    flex-direction: row;
+    height: 3%;
+    width: 100vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: center;
+  }
+
+  .nav-logo-main, .nav-open-menu {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+  }
+
+  .logo-main {
+    height: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .logo-main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-main-nav {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 147, 203, 0.65);
+    padding: 0;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .all-sub-ads {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sub {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+}

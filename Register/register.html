@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/VB0pYGZ/Logo-web.png">
+  <title>Lancherix</title>
+  <link href="register.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="content">
+    <img src="https://i.ibb.co/JyxPJWS/Logo-Lancherix-oryzontal.png" alt="logo" class="logo">
+    <input type="text" placeholder="E-mail" class="email">
+    <p class="invalidEmail invalid"></p>
+    <input type="text" placeholder="Name" class="name">
+    <p class="noName invalid"></p>
+    <input type="text" placeholder="Last name" class="lastname">
+    <p class="noLastName invalid"></p>
+    <div class="birth-date">
+      <select name="month" id="month">
+        <option value="select-month">Month</option>
+        <option value="0">Jannuary</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+      </select>
+      <select name="date" id="date">
+        <option value="select-date">Date</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <select name="year" id="year">
+        <option value="select-year">Year</option>
+        <option value="2008">2008</option>
+        <option value="2006">2006</option>
+        <option value="1953">1953</option>
+      </select>
+    </div>
+    <p class="invalidBirthDate invalid"></p>
+    <select name="gender" id="gender">
+      <option value="select-gender">Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Prefer not to tell">Prefer not to tell</option>
+    </select>
+    <p class="invalidGender invalid"></p>
+    <input type="text" placeholder="Username" class="username">
+    <p class="invalidUsername invalid"></p>
+    <input type="password" placeholder="Password" class="password">
+    <p class="invalidPassword1 invalid"></p>
+    <input type="password" placeholder="Confirm password" class="password2 password">
+    <p class="invalidPassword2 invalid"></p>
+    <button class="register" id="register">Register</button>
+    <a href="http://127.0.0.1:5500/LogIn/login.html" class="forgot">I already have an account</a>
+  </div>
+  <script type="module" src="register.js" defer></script>
+</body>
+
+</html>

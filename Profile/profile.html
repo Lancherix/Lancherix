@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/VB0pYGZ/Logo-web.png">
+  <title>Lancherix</title>
+  <link href="profile.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <div class="nav-logo-main">
+      <img src="https://i.ibb.co/T85tr1N/menu-icon.png" alt="open menu" class="open-menu">
+      <img src="https://i.ibb.co/DGzq866/Logo-horizontal-1-sin-fondo.png" alt="logo-main" class="logo-main">
+    </div>
+    <div class="nav-menu nav-logo">
+      <div class="logo-main-nav">
+        <img src="https://i.ibb.co/DGzq866/Logo-horizontal-1-sin-fondo.png" alt="logo-main" class="logo-main" onclick="window.location.href='http://127.0.0.1:5500'">
+      </div>
+      <div class="menu-main-nav">
+        <button class="nav-button" onclick="window.location.href='http://127.0.0.1:5500'">Home</button>
+        <button class="nav-button">Finance</button>
+        <button class="nav-button">Notes</button>
+        <button class="nav-button">Chat</button>
+        <button class="nav-button">Music</button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-clone">
+  </div>
+  <div class="content">
+    <div class="menu">
+      <a href="javascript:void(0)" class="close-menu">&times;</a>
+      <div class="apps-menu">
+        <button class="home-btn menu-btn">My profile</button>
+        <button class="finance-btn menu-btn" onclick="window.location.href='EditProfile/editprofile.html'">Edit profile</button>
+        <button class="notes-btn menu-btn">Change password</button>
+        <button class="chat-btn menu-btn">Privacy and security</button>
+        <button class="chat-btn menu-btn">Delete account</button>
+        <button class="chat-btn menu-btn">Log out</button>
+      </div>
+    </div>
+    <div class="center-content">
+      <div class="content-right">
+        <div class="all-descriptions">
+          <div class="picture-name">
+            <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="Profile picture" class="profile-picture">
+            <div class="name-username">
+              <h1 class="name description"></h1>
+              <h2 class="username description"></h2>
+            </div>
+          </div>
+          <div class="descriptions">
+            <p class="email-indicator indicator">Email</p>
+            <p class="email description"></p>
+            <p class="birthdate-indicator indicator">Birthdate</p>
+            <p class="birthdate description"></p>
+            <p class="gender-indicator indicator">Gender</p>
+            <p class="gender description"></p>
+            <p class="bio-indicator indicator">Bio</p>
+            <p class="bio description"></p>
+            <p class="links-indicator indicator">Link</p>
+            <a class="links description" href="" target="_blank"></a>
+            <p class="phone-indicator indicator">Phone number</p>
+            <p class="phone description"></p>
+            <p class="country-indicator indicator">Country</p>
+            <p class="country description"></p>
+          </div>
+        </div>
+      </div>
+      <div class="botton-margin">
+
+      </div>
+    </div>
+  </div>
+  <script type="module" src="profile.js" defer></script>
+</body>
+</html>
