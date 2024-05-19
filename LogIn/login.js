@@ -53,7 +53,7 @@ document.getElementById("submit").addEventListener("click", async function(event
 
       await signInWithEmailAndPassword(auth, email, password);
 
-      window.location.href = "http://127.0.0.1:5500";
+      window.location.href = "https://lancherix.github.io/Lancherix";
     } else {
       invalidItem.innerHTML = "*Wrong password or username, try again.";
     }
