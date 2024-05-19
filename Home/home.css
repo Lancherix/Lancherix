@@ -190,6 +190,11 @@ body {
 }
 
 .on-action-h1 {
+  background: linear-gradient(to right, #C85AD3, #E34787, #FF7B00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
   font-size: 4rem;
   margin: 3%;
 }
