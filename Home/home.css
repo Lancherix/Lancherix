@@ -157,117 +157,64 @@ body {
   cursor: pointer;
 }
 
-.main-ad {
-  display: flex;
-  flex-direction: row;
-  box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
-  width: 90vw;
-  height: 80vh;
-  margin: 3% 5% 3% 5%;
-  border-radius: 20px;
-  align-items: center;
-}
-
-.main-ad:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-}
-
-.main-ad-img {
-  height: 80vh;
-  width: 90vw;
-  border-radius: 20px;
-  background-image: url("https://miro.medium.com/v2/resize:fit:1200/1*2vOK7SSRpUTg9_mzATsy0A@2x.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.sub-ads {
+.hero {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-
-.on-action-h1 {
-  background: linear-gradient(to right, #C85AD3, #E34787, #FF7B00);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-  font-size: 4rem;
-  margin: 3%;
-}
-
-.all-sub-ads {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 80vh;
-  margin: 3% 5% 3% 5%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.sub {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 80vh;
-  margin-bottom: 5%;
-  background-color: #D9D9D9;
-  box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
-  border-radius: 20px;
   align-items: center;
   justify-content: start;
+  height: 70hv;
+  margin: 0;
+  padding: 0;
 }
 
-.sub:hover {
-  cursor: pointer;
-  transform: scale(1.01);
+.mainTitle {
+  margin-top: 10%;
+  margin-bottom: 1%;
+  background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 4rem;
 }
 
-.sub h1 {
-  width: 90%;
-  margin: 5%;
-  text-align: left;
-  color: #0D0D0D;
+.mainDescription {
+  margin: 0;
+  color: #A4A5A6;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.sub p {
-  width: 90%;
-  margin: 5%;
-  text-align: left;
-  color: #737373;
-  margin-top: 0;
-  font-size: 1.2rem;
+.mainImg {
+  display: none;
+  visibility: hidden;
+  width: 50vw;
 }
 
-.sub-ad-img {
+.buttons {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Btn {
+  width: 10%;
   height: 50%;
-  border-radius: 20px 20px 0 0;
+  margin: 2%;
+  padding: 1%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: #0074ff;
 }
 
-.sub-img1 {
-  background-image: url("https://i.ibb.co/5r1Yx51/OWINIS1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.sub-img2 {
-  background-image: url("https://i.ibb.co/qDKFH7J/76354.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.sub-img3 {
-  background-image: url("https://thepointsguy.global.ssl.fastly.net/us/originals/2022/07/Times-Square-scaled.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.Btn:hover {
+  background-color: #004191;
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {
