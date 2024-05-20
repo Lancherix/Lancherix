@@ -1,5 +1,4 @@
-# Lancherix
-- ![logo](https://github.com/Lancherix/Lancherix/assets/166051083/f5b7088f-146c-44e0-8151-18166110fff4)
+![logo](https://github.com/Lancherix/Lancherix/assets/166051083/f5b7088f-146c-44e0-8151-18166110fff4)
 - Lancherix is a web page application to manage, organize and guive life to your ideas in files such as notes, photos and more. You can also organize your time by using the calendar.
 
 ## :ledger: Index
