@@ -1,9 +1,9 @@
 ![logo](https://github.com/Lancherix/Lancherix/assets/166051083/f5b7088f-146c-44e0-8151-18166110fff4)
-# Lancherix is a web page application to manage, organize and guive life to your ideas in files such as notes, photos and more. You can also organize your time by using the calendar.
+# Lancherix is a web page application to manage, organize and guive life to your ideas in files such as notes, photos and more. You can organize your time by using the calendar and chat with your friends.
 
 ## :ledger: Index
 
-- [About](#beginner-about)
+- [Stroke of Genius.](#beginner-about)
 - [Usage](#zap-usage)
   - [Installation](#electric_plug-installation)
   - [Commands](#package-commands)
@@ -24,14 +24,13 @@
 - [License](#lock-license)
 
 ##  :beginner: About
-Add a detailed introduction about the project here, everything you want the reader to know.
+Change the world by guving life to your ideas with Lancherix.
 
 ## :zap: Usage
-Write about how to use this project.
+Create an account, make notes, save photos, manage your time and chat with your friends.
 
 ###  :electric_plug: Installation
-- Steps on how to install this project, to use it.
-- Be very detailed here, For example, if you have tools which run on different operating systems, write installation steps for all of them.
+- Open lancherix.com, register by guving your name, username, email and password. Know you are ready to make notes, save images, manage your time and chat with your friends.
 
 ```
 $ add installations steps if you have to.
