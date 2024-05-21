@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/VB0pYGZ/Logo-web.png">
   <title>Lancherix</title>
-  <link href="photos.css" rel="stylesheet" type="text/css" />
+  <link href="calendar.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -26,8 +26,8 @@
       </div>
       <div class="menu-main-nav">
         <button class="nav-button" onclick="window.location.href='https://lancherix.github.io/Lancherix'">Home</button>
-        <button class="nav-button" onclick="window.location.href='Notes/notes.html'">Notes</button>
-        <button class="nav-button">Photos</button>
+        <button class="nav-button">Notes</button>
+        <button class="nav-button" onclick="window.location.href='https://lancherix.github.io/Lancherix/Photos/photos.html'">Photos</button>
         <button class="nav-button">Chat</button>
         <button class="nav-button">Calendar</button>
       </div>
@@ -51,85 +51,47 @@
         <button class="notes-btn menu-btn" onclick="window.location.href='https://lancherix.github.io/Lancherix/Notes/notes.html'"><img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
                       alt="logo-menu" class="logo-notes logo-menu">Notes</button>
-        <button class="chat-btn menu-btn"><img src="https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-493155.png?f=webp"
+        <button class="chat-btn menu-btn" onclick="window.location.href='https://lancherix.github.io/Lancherix/Photos/photos.html'"><img src="https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-493155.png?f=webp"
                     alt="logo-menu" class="logo-photos logo-menu">Photos</button>
         <button class="chat-btn menu-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png"
               alt="logo-chat-menu" class="logo-chat-menu logo-menu">Chat</button>
-        <button class="chat-btn menu-btn" onclick="window.location.href='https://lancherix.github.io/Lancherix/Calendar/calendar.html'"><img src="https://static-00.iconduck.com/assets.00/calendar-icon-1995x2048-tot17508.png"
+        <button class="chat-btn menu-btn"><img src="https://static-00.iconduck.com/assets.00/calendar-icon-1995x2048-tot17508.png"
             alt="logo-chat-menu" class="logo-chat-menu logo-menu">Calendar</button>
-        
       </div>
     </div>
     <div class="content-center-right">
       <div class="content-center">
-        <div class="photo-content">
-          <div class="photo-rows">
-            <div class="areal-photo photoMax">
-
+        <div class="calendar-cotent calendar">
+          <div class="calendar-editor">
+            <div class="calendar-editor-top header">
+              <button id="prev">&lt;</button>
+              <div id="month-year"></div>
+              <button id="next">&gt;</button>
             </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo  photoMax">
-
-            </div>
-          </div>
-          <div class="photo-rows">
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
+            <div class="calendar-editor-bottom weekdays">
+              <div class="sunday">Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div class="saturday">Sat</div>
             </div>
           </div>
-          <div class="photo-rows">
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-          </div>
-          <div class="photo-rows">
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-            <div class="areal-photo photoMax">
-
-            </div>
-          </div>
+          <div class="days" id="days"></div>
         </div>
       </div>
       <div class="content-right">
-        <div class="my-photos">
-          <div class="photos-logo">
-            <div class="thePhotosLogo">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-493155.png?f=webp"
-                alt="" class="logo-photos">
-              <h2>Photos</h2>
-            </div>
-          </div>
-          <div class="all-photos-more">
-            <div class="all-photos">
-              <input type="file" id="pictureInput" accept="image/*">
-              <input type="text" class="pictureName" placeholder="Picture name">
-              <button class="uploadImage" id="uploadImageButton">Upload Image</button>
-            </div>
+        <div class="my-calendar">
+          <div class="calendar-logo selected-date"></div>
+          <div class="all-calendar-more">
+            <div class="all-calendar">
+
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script type="module" src="photos.js" defer></script>
+  <script type="module" src="calendar.js" defer></script>
 </body>
 </html>
