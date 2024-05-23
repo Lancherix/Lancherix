@@ -326,11 +326,11 @@ html {
     padding-bottom: 3.2%;
     align-items: center;
     justify-content: center;
+    color: white;
   }
   
   .calendar {
     background-color: #072F2E;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
   }
