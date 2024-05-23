@@ -242,7 +242,7 @@ html {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: #F2F2F2;
+    background-color: #072F2E;
     border-radius: 15px;
     box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
   }
@@ -262,7 +262,7 @@ html {
     flex-direction: column;
     width: 100%;
     height: 15%;
-    background-color: #B3D4FF;
+    background-color: #09191f;
     margin-top: 0;
     border-radius: 15px 15px 0px 0px;
     padding-top: 2%;
@@ -293,7 +293,7 @@ html {
   }
   
   #days::-webkit-scrollbar-thumb {
-    background: grey;
+    background: #393e46;
   }
   
   .content-right {
@@ -308,7 +308,7 @@ html {
   .my-calendar {
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #072F2E;
     border-radius: 15px;
     box-shadow: 5px 7px 12px -3px rgba(0, 0, 0, 0.49);
     padding: 0;
@@ -319,7 +319,7 @@ html {
     flex-direction: row;
     width: 100%;
     height: 15%;
-    background-color: #B3D4FF;
+    background-color: #09191f;
     margin-top: 0;
     border-radius: 15px 15px 0px 0px;
     padding-top: 3.2%;
@@ -329,7 +329,7 @@ html {
   }
   
   .calendar {
-    background-color: white;
+    background-color: #072F2E;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
@@ -350,7 +350,7 @@ html {
   .header button {
     border: none;
     background-color: transparent;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     font-weight: 700;
   }
@@ -409,8 +409,8 @@ html {
     width: 15%;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #393e46;
+    border-right: 1px solid #393e46;
     padding-bottom: 2%;
   }
   
@@ -430,21 +430,21 @@ html {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #393e46;
   }
   
   .days div:hover {
-    background-color: #e0e0e0;
+    background-color: #2e2e2e;
+  }
+
+  .weekend {
+    background-color: #042630;
   }
   
   .selected {
-    background-color: #F2F2F2;
+    background-color: #00564d;
   }
-  
-  .weekend {
-    background-color: #f0f8ff;
-  }
-  
+    
   .days .today {
     border-top: 3px solid #0074ff;
     background-color: rgba(0, 147, 203, 0.1);
