@@ -332,6 +332,7 @@ html {
     background-color: #072F2E;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: white;
   }
   
   .header {
