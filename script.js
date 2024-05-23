@@ -146,3 +146,91 @@ function displayDate() {
 }
 
 setInterval(displayDate, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const monthYearElement = document.getElementById('month-year');
+  const calendarLogo = document.querySelector(".calendar-logo");
+  const daysElement = document.getElementById('days');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  const selectedDateElement = document.querySelector('.selected-date');
+
+  let currentDate = new Date();
+
+  function renderCalendar(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const today = new Date();
+
+      const firstDayOfMonth = new Date(year, month, 1).getDay();
+      const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+      const lastDayOfMonth = new Date(year, month, lastDateOfMonth).getDay();
+
+      const monthNames = [
+          'January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+
+      monthYearElement.innerHTML = `<p class="monthName">${monthNames[month]}</p><p class="yearName">${year}</p>`;
+
+      daysElement.innerHTML = '';
+
+      for (let i = 0; i < firstDayOfMonth; i++) {
+          daysElement.innerHTML += '<div></div>';
+      }
+
+      for (let i = 1; i <= lastDateOfMonth; i++) {
+          const dayElement = document.createElement('div');
+          dayElement.textContent = i;
+          dayElement.classList.add('calendar-day');
+
+          const dayOfWeek = new Date(year, month, i).getDay();
+          if (dayOfWeek === 0 || dayOfWeek === 6) {
+              dayElement.classList.add('weekend');
+          }
+
+          if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+              dayElement.classList.add('today');
+          }
+
+          daysElement.appendChild(dayElement);
+      }
+
+      for (let i = lastDayOfMonth + 1; i <= 6; i++) {
+          daysElement.innerHTML += '<div></div>';
+      }
+  }
+
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  function displaySelectedDate(date, dayName) {
+      const dateString = `${dayName} ${date.getDate()}`;
+      selectedDateElement.textContent = dateString;
+  }
+
+  prevButton.addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar(currentDate);
+  });
+
+  nextButton.addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar(currentDate);
+  });
+
+  daysElement.addEventListener('click', (event) => {
+      const clickedElement = event.target;
+      if (clickedElement.classList.contains('calendar-day')) {
+          const selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(clickedElement.textContent));
+          document.querySelectorAll('.calendar-day.selected').forEach(element => {
+              element.classList.remove('selected');
+          });
+          clickedElement.classList.add('selected');
+
+          calendarLogo.innerHTML = `<p class="weekName">${dayNames[selectedDate.getDay()]}</p><p class="dateNumber">${selectedDate.getDate()}</p>`;
+          console.log("Hello Isa");
+      }
+  });
+
+  renderCalendar(currentDate);
+});
