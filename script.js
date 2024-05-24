@@ -60,7 +60,7 @@ get(usernameRef).then((snapshot) => {
                         noteElement.classList.add("an-activity");
 
                         noteElement.innerHTML = `
-                            <button class="activity-btn" onclick="window.location.href='Notes/notes.html'"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
+                            <button class="activity-btn" onclick="window.location.href='Notes/notes.html'"><img src="Images/NotesLogo.png"
                                 alt="logo-word" class="logo-activity">
                               <div class="activity-text">
                                 <h3 class="activity-title">${note.title}</h3>
