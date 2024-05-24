@@ -60,7 +60,7 @@ get(usernameRef).then((snapshot) => {
                         noteElement.classList.add("an-activity");
 
                         noteElement.innerHTML = `
-                            <button class="activity-btn" onclick="window.location.href='Notes/notes.html'"><img src="Images/NotesLogo.png"
+                            <button class="activity-btn" onclick="window.location.href='Notes/notes.html'"><img src="Images/TheNotesLogo.png"
                                 alt="logo-word" class="logo-activity">
                               <div class="activity-text">
                                 <h3 class="activity-title">${note.title}</h3>
