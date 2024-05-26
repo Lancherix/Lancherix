@@ -50,6 +50,7 @@ document.getElementById("submit").addEventListener("click", async function(event
 
       localStorage.setItem('username', username);
       localStorage.setItem('email', email);
+      console.log("Username and email stored in localStorage:", localStorage.getItem('username'), localStorage.getItem('email'));
 
       await signInWithEmailAndPassword(auth, email, password);
 
