@@ -19,4 +19,4 @@ function checkUsername() {
   }
 }
 
-window.onload = checkUsername;
+checkUsername();
