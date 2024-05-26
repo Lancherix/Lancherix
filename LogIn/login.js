@@ -53,7 +53,7 @@ document.getElementById("submit").addEventListener("click", async function(event
 
       await signInWithEmailAndPassword(auth, email, password);
 
-      window.location.href = "https://www.lancherix.com/home.html";
+      window.location.href = "/home.html";
     } else {
       invalidItem.innerHTML = "*Wrong password or username, try again.";
     }
