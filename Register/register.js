@@ -172,7 +172,7 @@ document.getElementById("register").addEventListener("click", function(event) {
             const user = userCredential.user;
 
             alert("Creating account...");
-            window.location.href = "https://lancherix.github.io/Lancherix";
+            window.location.href = "https://www.lancherix.com/home.html";
             // ...
           })
           .catch((error) => {

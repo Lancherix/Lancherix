@@ -193,4 +193,5 @@ get(usernameRef).then((snapshot) => {
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
+    window.location.href='https://www.lancherix.com/'
 });
