@@ -45,7 +45,7 @@ get(usernameRef).then((snapshot) => {
         localStorage.setItem('username', username);
     } else {
         console.log("No data available");
-        window.location.href = 'Home/home.html'
+        window.location.href = 'https://www.lancherix.com/'
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clickedElement.classList.add('selected');
 
             calendarLogo.innerHTML = `<p class="weekName">${dayNames[selectedDate.getDay()]}</p><p class="dateNumber">${selectedDate.getDate()}</p>`;
-            console.log("Hello Isa");
         }
     });
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/VB0pYGZ/Logo-web.png">
+  <title>Lancherix</title>
+  <link href="home.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <div class="nav-logo-main">
+      <img src="https://i.ibb.co/T85tr1N/menu-icon.png" alt="open menu" class="open-menu">
+      <img src="https://i.ibb.co/DGzq866/Logo-horizontal-1-sin-fondo.png" alt="logo-main" class="logo-main">
+    </div>
+    <div class="nav-menu nav-logo">
+      <div class="logo-main-nav">
+        <img src="https://i.ibb.co/DGzq866/Logo-horizontal-1-sin-fondo.png" alt="logo-main" class="logo-main">
+      </div>
+      <div class="menu-main-nav">
+        <button class="nav-button">Home</button>
+        <button class="nav-button" onclick="window.location.href='Notes/notes.html'">Notes</button>
+        <button class="nav-button" onclick="window.location.href='Photos/photos.html'">Photos</button>
+        <button class="nav-button" onclick="window.location.href='Calendar/calendar.html'">Calendar</button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-clone">
+  </div>
+  <div class="content">
+    <div class="menu">
+      <a href="javascript:void(0)" class="close-menu">&times;</a>
+      <div class="profile-menu">
+        <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="" class="profile-picture" onclick="window.location.href='Profile/profile.html'">
+        <div class="profile-info">
+          <h2 class="full-name" onclick="window.location.href='Profile/profile.html'"></h2>
+          <p class="username-text" onclick="window.location.href='Profile/profile.html'"></p>
+        </div>
+      </div>
+      <div class="apps-menu">
+        <button class="home-btn menu-btn"><img src="https://cdn-icons-png.flaticon.com/512/95/95020.png" alt="logo-menu"
+            class="logo-home logo-menu">Home</button>
+        <button class="notes-btn menu-btn" onclick="window.location.href='Notes/notes.html'"><img
+        src="Images/TheNotesLogo.png"
+                    alt="logo-menu" class="logo-notes logo-menu">Notes</button>
+                <button class="chat-btn menu-btn" onclick="window.location.href='Photos/photos.html'"><img src="Images/ThePhotosLogo.png"
+                  alt="logo-menu" class="logo-photos logo-menu">Photos</button>
+        <button class="chat-btn menu-btn" onclick="window.location.href='Calendar/calendar.html'"><img src="Images/CalendarLogo.png"
+          alt="logo-chat-menu" class="logo-chat-menu logo-menu">Calendar</button>
+      </div>
+    </div>
+    <div class="content-center-right">
+      <div class="content-center">
+        <div class="news" id="clock-div">
+          <div class="news-overlay">
+            <h1 class="real-time" id="clock"></h1>
+            <p class="date" id="date"></p>
+          </div>
+        </div>
+        <div class="activity">
+          <div class="recent-activity">
+            <h1>Recent activity</h1>
+          </div>
+          <div class="activities">
+            
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="chats">
+          <div class="all-chats-more">
+            <div class="calendar-cotent calendar">
+              <div class="calendar-editor">
+                <div class="calendar-editor-top header">
+                  <button id="prev">&lt;</button>
+                  <div id="month-year"></div>
+                  <button id="next">&gt;</button>
+                </div>
+                <div class="calendar-editor-bottom weekdays">
+                  <div class="sunday">S</div>
+                  <div>M</div>
+                  <div>T</div>
+                  <div>W</div>
+                  <div>T</div>
+                  <div>F</div>
+                  <div class="saturday">S</div>
+                </div>
+              </div>
+              <div class="days" id="days"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="home.js" defer></script>
+</body>
+</html>

@@ -189,7 +189,7 @@ get(usernameRef).then((snapshot) => {
 
     } else {
         console.log("No data available");
-        window.location.href = 'Home/home.html'
+        window.location.href = 'https://www.lancherix.com/'
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
