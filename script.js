@@ -12,3 +12,11 @@ document.querySelector(".close-menu").addEventListener("click", function(event) 
   document.querySelector(".menu").style.width = "0";
   document.body.style.overflow = "auto";
 });
+
+function checkUsername() {
+  if (uniqueUsername != null) {
+    window.location.href='/home.html'
+  }
+}
+
+window.onload = checkUsername;
