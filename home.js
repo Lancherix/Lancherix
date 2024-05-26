@@ -101,7 +101,7 @@ get(usernameRef).then((snapshot) => {
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
-    window.location.href='https://www.lancherix.com/'
+    alert("There is an error");
 });
 
 document.querySelector(".open-menu").addEventListener("click", function(event) {
