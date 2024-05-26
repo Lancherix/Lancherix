@@ -97,6 +97,7 @@ get(usernameRef).then((snapshot) => {
       
     } else {
         console.log("No data available");
+        alert("TNo data available");
         window.location.href='https://www.lancherix.com/'
     }
 }).catch((error) => {
@@ -229,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
           clickedElement.classList.add('selected');
 
           calendarLogo.innerHTML = `<p class="weekName">${dayNames[selectedDate.getDay()]}</p><p class="dateNumber">${selectedDate.getDate()}</p>`;
-          console.log("Hello Isa");
       }
   });
 
