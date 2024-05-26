@@ -13,6 +13,8 @@ document.querySelector(".close-menu").addEventListener("click", function(event) 
   document.body.style.overflow = "auto";
 });
 
+const uniqueUsername = localStorage.getItem("username");
+
 function checkUsername() {
   if (uniqueUsername != null) {
     window.location.href='/home.html'
