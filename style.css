@@ -176,6 +176,17 @@ body {
   overflow-y: hidden;
 }
 
+.sub-sub-hero {
+  width: 100%;
+  height: 50vh;
+  margin-top: 1%;
+  background-image: url("Images/fondoLogoDefinitivo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .sub-hero {
   display: flex;
   flex-direction: column;
@@ -201,7 +212,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3%;
 }
 
 .an-app {
@@ -223,14 +233,9 @@ body {
   flex-direction: column;
   width: 35%;
   height: 100%;
-  background-color: #0074ff;
+  background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
   transition: 0.2s;
   border-radius: 10px;
-  background-image: url("https://miro.medium.com/v2/resize:fit:2000/0*3pvh7rbKpXaFOZwp.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-attachment: fixed;*/
 }
 
 .subImg:hover {
