@@ -210,6 +210,11 @@ body {
   background-color: #0074ff;
   transition: 0.2s;
   border-radius: 10px;
+  background-image: url("https://miro.medium.com/v2/resize:fit:2000/0*3pvh7rbKpXaFOZwp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .subImg:hover {
