@@ -231,20 +231,43 @@ body {
 .subImg {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  height: 100%;
+  width: 29%;
+  height: 75%;
   background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
   transition: 0.2s;
   border-radius: 10px;
+  justify-content: center;
+  padding: 2%;
+  color: white;
 }
 
 .subImg:hover {
   box-shadow: 0px 0px 20px 7px rgba(0,116,255,0.71);
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .subIm1, .subIm6 {
   width: 25%;
+}
+
+.subImg h2 {
+  margin-bottom: 5%;
+}
+
+.play {
+  width: 100%;
+  height: 25%;
+  border-top: 3px solid white;
+  padding-top: 4%;
+}
+
+.play img {
+  width: 13%;
+}
+
+.play img:hover {
+  transform: scale(1.05);
 }
 
 .mainTitle {
@@ -303,6 +326,44 @@ footer {
   width: 100%;
   height: 30vh;
   background-color: #D9D9D9;
+  justify-content: center;
+}
+
+.global-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.global-footer__right, .global-footer__left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.global-footer__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footerLink {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media (min-width: 500px) {
