@@ -327,6 +327,16 @@ footer {
   padding-right: 5%;
 }
 
+.footerTop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.logoF {
+  width: 15%;
+}
+
 .global-footer {
   display: flex;
   flex-direction: row;
