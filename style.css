@@ -374,6 +374,7 @@ footer {
 }
 
 .footerLink {
+  width: 30%;
   margin-left: 1%;
   margin-right: 1%;
 }
