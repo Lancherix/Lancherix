@@ -325,7 +325,7 @@ footer {
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
-  color: white;
+  color: #D9D9D9;
 }
 
 .footerTop {
@@ -333,7 +333,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding-bottom: 2%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #D9D9D9;
 }
 
 .logoF {
@@ -378,7 +378,7 @@ footer {
 }
 
 a {
-  color: white;
+  color: #D9D9D9;
   text-decoration: none;
 }
 
