@@ -343,6 +343,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 3%;
 }
 
 .global-footer__right, .global-footer__left {
