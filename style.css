@@ -331,6 +331,8 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-bottom: 3%;
+  border-bottom: 2px solid black;
 }
 
 .logoF {
