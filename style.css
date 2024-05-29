@@ -319,16 +319,18 @@ body {
 footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 30vh;
   background-color: #D9D9D9;
   justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .global-footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .global-footer__right, .global-footer__left {
