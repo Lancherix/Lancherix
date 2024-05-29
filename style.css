@@ -231,7 +231,7 @@ body {
 .subImg {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 28%;
   height: 75%;
   background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
   transition: 0.2s;
