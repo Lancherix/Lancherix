@@ -380,6 +380,10 @@ footer {
   text-align: center;
 }
 
+.footerLink3 {
+  margin-right: 0;
+}
+
 a {
   color: #A4A5A6;
   text-decoration: none;
