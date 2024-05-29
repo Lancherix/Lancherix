@@ -362,6 +362,13 @@ footer {
   width: 100%;
 }
 
+.clr-primary-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
 .footerLink {
   margin-left: 1%;
   margin-right: 1%;
