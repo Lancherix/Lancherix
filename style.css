@@ -321,10 +321,11 @@ footer {
   flex-direction: column;
   width: 90%;
   height: 30vh;
-  background-color: #D9D9D9;
+  background-color: #09191f;
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
+  color: white;
 }
 
 .footerTop {
@@ -332,7 +333,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding-bottom: 2%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .logoF {
