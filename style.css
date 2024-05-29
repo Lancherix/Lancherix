@@ -351,6 +351,7 @@ footer {
 
 .global-footer__left {
   width: 40%;
+  justify-content: end;
 }
 
 .global-footer__links {
