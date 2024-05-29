@@ -231,7 +231,7 @@ body {
 .subImg {
   display: flex;
   flex-direction: column;
-  width: 29%;
+  width: 30%;
   height: 75%;
   background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
   transition: 0.2s;
@@ -245,10 +245,6 @@ body {
   box-shadow: 0px 0px 20px 7px rgba(0,116,255,0.71);
   transition: 0.2s;
   cursor: pointer;
-}
-
-.subIm1, .subIm6 {
-  width: 25%;
 }
 
 .subImg h2 {
