@@ -349,6 +349,10 @@ footer {
   align-items: center;
 }
 
+.global-footer__left {
+  width: 40%;
+}
+
 .global-footer__links {
   display: flex;
   flex-direction: row;
