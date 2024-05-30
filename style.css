@@ -220,7 +220,7 @@ body {
   flex-direction: row;
   width: 90%;
   height: 65vh;
-  background-color: lightgray;
+  background-color: #dddddd;
   padding: 5%;
   align-items: center;
   justify-content: space-between;
@@ -228,7 +228,7 @@ body {
 }
 
 .appMock {
-  height: 100%;
+  height: 80%;
 }
 
 .appContent {
