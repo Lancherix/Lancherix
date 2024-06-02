@@ -145,6 +145,7 @@ get(usernameRef).then((snapshot) => {
                         photoDiv.className = "photo";
                         const img = document.createElement("img");
                         img.src = photoObject.ImageURL;
+                        img.className = "areal-photo photoMax";
                         photoDiv.appendChild(img);
                         photosContainer.appendChild(photoDiv);
                     } else {
