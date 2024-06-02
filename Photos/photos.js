@@ -142,11 +142,8 @@ get(usernameRef).then((snapshot) => {
                 photoObjects.forEach((photoObject) => {
                     if (photoObject.ImageURL) {
                         const photoDiv = document.createElement("div");
-                        photoDiv.className = "photo";
-                        const img = document.createElement("img");
-                        img.src = photoObject.ImageURL;
-                        img.className = "areal-photo photoMax";
-                        photoDiv.appendChild(img);
+                        photoDiv.className = "photo areal-photo photoMax";
+                        photoDiv.style.backgroundImage = `url(${photoObject.ImageURL})`;
                         photosContainer.appendChild(photoDiv);
                     } else {
                         console.error("Invalid photo object:", photoObject);
