@@ -128,6 +128,8 @@ get(usernameRef).then((snapshot) => {
             }
         });
 
+        const photosContainer = document.querySelector(".photo-content");
+
         const userPhotosRef = ref(database, `users/${uniqueUsername}/photos`);
         get(userPhotosRef)
         .then((snapshot) => {
