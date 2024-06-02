@@ -11,7 +11,6 @@ const firebaseConfig = {
     appId: "1:583309405095:web:9cb478100805159f46e482"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const storage = getStorage(app);
@@ -35,7 +34,6 @@ document.querySelector(".close-menu").addEventListener("click", function(event) 
     document.querySelector(".menu").style.width = "0";
 });
 
-// Retrieve the username from Firebase Realtime Database
 const usernameRef = ref(database, 'users/' + uniqueUsername);
 get(usernameRef).then((snapshot) => {
     if (snapshot.exists()) {
@@ -54,10 +52,8 @@ get(usernameRef).then((snapshot) => {
         fullName.innerHTML = userData.firstname + " " + userData.lastname;
         usernameText.innerHTML = "@" + userData.username;
 
-        // Save the username to local storage
         localStorage.setItem('username', username);
 
-        // Handle image input
         document.getElementById("pictureInput").addEventListener("change", function(event) {
             const file = event.target.files[0];
             handlePictureInput(file, userData);
@@ -90,7 +86,6 @@ get(usernameRef).then((snapshot) => {
             handlePictureInput(file);
         });
 
-        // Upload image
         document.querySelector(".uploadImage").addEventListener("click", function(event) {
             const pictureName = document.querySelector(".pictureName").value;
             if (!pictureName) {
@@ -146,36 +141,37 @@ get(usernameRef).then((snapshot) => {
                     return new Date(b.UploadDate) - new Date(a.UploadDate);
                 });
 
-                let photoIndex = 0;
-                const arealPhotoElements = document.querySelectorAll(".areal-photo");
-                photoArray.forEach((photoData) => {
+                const photoContent = document.querySelector(".photo-content");
+                photoContent.innerHTML = "";
+
+                photoArray.forEach((photoData, index) => {
                     const imageURL = photoData.ImageURL;
-                    const containerCount = arealPhotoElements.length;
-                    const containerIndex = photoIndex % containerCount;
-                    arealPhotoElements[containerIndex].style.backgroundImage = `url('${imageURL}')`;
-                    photoIndex++;
+
+                    const photoDiv = document.createElement("div");
+                    photoDiv.classList.add("areal-photo", "photoMax");
+                    photoDiv.style.backgroundImage = `url('${imageURL}')`;
+
+                    photoDiv.addEventListener("click", function() {
+                        photoContent.innerHTML = "";
+                        photoContent.style.backgroundImage = `url('${imageURL}')`;
+                        photoContent.style.backgroundSize = "contain";
+                        photoContent.style.backgroundPosition = "center";
+                        photoContent.style.backgroundRepeat = "no-repeat";
+                    });
+
+                    if (index % 3 === 0) {
+                        const newRow = document.createElement("div");
+                        newRow.classList.add("photo-rows");
+                        photoContent.appendChild(newRow);
+                    }
+                    const currentRow = photoContent.lastElementChild;
+                    currentRow.appendChild(photoDiv);
                 });
             } else {
                 console.log("No photos available");
             }
         }).catch((error) => {
             console.error("Error getting user photos: ", error);
-        });
-
-        const arealPhotos = document.querySelectorAll(".areal-photo");
-
-        arealPhotos.forEach(function(photo) {
-            photo.addEventListener("click", function(event) {
-                const computedStyle = window.getComputedStyle(this);
-                const imageURL = computedStyle.getPropertyValue("background-image").replace('url("', '').replace('")', '');
-
-                const photoContent = document.querySelector(".photo-content");
-                photoContent.innerHTML = "";
-                photoContent.style.backgroundImage = `url('${imageURL}')`;
-                photoContent.style.backgroundSize = "contain";
-                photoContent.style.backgroundPosition = "center";
-                photoContent.style.backgroundRepeat = "no-repeat";
-            });
         });
 
         document.querySelector(".photo-content").addEventListener("click", function(event) {
