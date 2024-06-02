@@ -135,24 +135,21 @@ get(usernameRef).then((snapshot) => {
         .then((snapshot) => {
             if (snapshot.exists()) {
                 const photosData = snapshot.val();
-                const photoURLs = Object.values(photosData);
+                const photoObjects = Object.values(photosData);
 
                 photosContainer.innerHTML = ""; // Clear previous photos
 
-                photoURLs.forEach((photoURL) => {
-                    const photoDiv = document.createElement("div");
-                    photoDiv.className = "photo";
-                    const img = document.createElement("img");
-
-                    if (typeof photoURL === 'string' && photoURL.startsWith("http")) {
-                        img.src = photoURL;
+                photoObjects.forEach((photoObject) => {
+                    if (photoObject.ImageURL) {
+                        const photoDiv = document.createElement("div");
+                        photoDiv.className = "photo";
+                        const img = document.createElement("img");
+                        img.src = photoObject.ImageURL;
+                        photoDiv.appendChild(img);
+                        photosContainer.appendChild(photoDiv);
                     } else {
-                        console.error("Invalid photo URL:", photoURL);
-                        return;
+                        console.error("Invalid photo object:", photoObject);
                     }
-
-                    photoDiv.appendChild(img);
-                    photosContainer.appendChild(photoDiv);
                 });
 
                 document.querySelectorAll(".photo img").forEach((imgElement) => {
