@@ -143,13 +143,20 @@ get(usernameRef).then((snapshot) => {
                     const photoDiv = document.createElement("div");
                     photoDiv.className = "photo";
                     const img = document.createElement("img");
-                    img.src = photoURL;
+
+                    if (typeof photoURL === 'string' && photoURL.startsWith("http")) {
+                        img.src = photoURL;
+                    } else {
+                        console.error("Invalid photo URL:", photoURL);
+                        return;
+                    }
+
                     photoDiv.appendChild(img);
                     photosContainer.appendChild(photoDiv);
                 });
 
                 document.querySelectorAll(".photo img").forEach((imgElement) => {
-                    if (imgElement && imgElement.parentElement && imgElement.parentElement.style) {
+                    if (imgElement && imgElement.parentElement) {
                         imgElement.parentElement.style.display = "inline-block";
                     }
                 });
