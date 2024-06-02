@@ -129,48 +129,33 @@ get(usernameRef).then((snapshot) => {
         });
 
         const userPhotosRef = ref(database, `users/${uniqueUsername}/photos`);
-        get(userPhotosRef).then((snapshot) => {
+        get(userPhotosRef)
+        .then((snapshot) => {
             if (snapshot.exists()) {
-                const photoArray = [];
-                snapshot.forEach((childSnapshot) => {
-                    const photoData = childSnapshot.val();
-                    photoArray.push(photoData);
-                });
+                const photosData = snapshot.val();
+                const photoURLs = Object.values(photosData);
 
-                photoArray.sort((a, b) => {
-                    return new Date(b.UploadDate) - new Date(a.UploadDate);
-                });
+                photosContainer.innerHTML = ""; // Clear previous photos
 
-                const photoContent = document.querySelector(".photo-content");
-                photoContent.innerHTML = "";
-
-                photoArray.forEach((photoData, index) => {
-                    const imageURL = photoData.ImageURL;
-
+                photoURLs.forEach((photoURL) => {
                     const photoDiv = document.createElement("div");
-                    photoDiv.classList.add("areal-photo", "photoMax");
-                    photoDiv.style.backgroundImage = `url('${imageURL}')`;
+                    photoDiv.className = "photo";
+                    const img = document.createElement("img");
+                    img.src = photoURL;
+                    photoDiv.appendChild(img);
+                    photosContainer.appendChild(photoDiv);
+                });
 
-                    photoDiv.addEventListener("click", function() {
-                        photoContent.innerHTML = "";
-                        photoContent.style.backgroundImage = `url('${imageURL}')`;
-                        photoContent.style.backgroundSize = "contain";
-                        photoContent.style.backgroundPosition = "center";
-                        photoContent.style.backgroundRepeat = "no-repeat";
-                    });
-
-                    if (index % 3 === 0) {
-                        const newRow = document.createElement("div");
-                        newRow.classList.add("photo-rows");
-                        photoContent.appendChild(newRow);
+                document.querySelectorAll(".photo img").forEach((imgElement) => {
+                    if (imgElement && imgElement.parentElement && imgElement.parentElement.style) {
+                        imgElement.parentElement.style.display = "inline-block";
                     }
-                    const currentRow = photoContent.lastElementChild;
-                    currentRow.appendChild(photoDiv);
                 });
             } else {
-                console.log("No photos available");
+                console.log("No photos available for this user.");
             }
-        }).catch((error) => {
+        })
+        .catch((error) => {
             console.error("Error getting user photos: ", error);
         });
 
