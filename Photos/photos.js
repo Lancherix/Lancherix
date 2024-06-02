@@ -135,9 +135,14 @@ get(usernameRef).then((snapshot) => {
             .then((snapshot) => {
                 if (snapshot.exists()) {
                     const photosData = snapshot.val();
-                    const photoObjects = Object.values(photosData).reverse(); // Reverse order
+                    const photoObjects = Object.values(photosData).sort((a, b) => {
+                        const dateA = new Date(a.UploadDate);
+                        const dateB = new Date(b.UploadDate);
 
-                    photosContainer.innerHTML = ""; // Clear previous photos
+                        return dateB.getTime() - dateA.getTime();
+                    });
+
+                    photosContainer.innerHTML = "";
 
                     photoObjects.forEach((photoObject) => {
                         if (photoObject.ImageURL) {
