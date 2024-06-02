@@ -128,7 +128,7 @@ get(usernameRef).then((snapshot) => {
             }
         });
 
-        const photosContainer = document.querySelector(".photo-content");
+        const photosContainer = document.querySelector(".myPhotos");
 
         const userPhotosRef = ref(database, `users/${uniqueUsername}/photos`);
         get(userPhotosRef)
