@@ -18,19 +18,19 @@ const storage = getStorage(app);
 const uniqueUsername = localStorage.getItem("username");
 const uniqueEmail = localStorage.getItem("email");
 
-document.querySelector(".open-menu").addEventListener("click", function(event) {
+document.querySelector(".open-menu").addEventListener("click", function (event) {
     document.querySelector(".menu").style.width = "100%";
 });
 
-document.querySelector(".logo-main").addEventListener("click", function(event) {
+document.querySelector(".logo-main").addEventListener("click", function (event) {
     document.querySelector(".menu").style.width = "100%";
 });
 
-document.querySelector(".close-menu").addEventListener("click", function(event) {
+document.querySelector(".close-menu").addEventListener("click", function (event) {
     document.querySelector(".menu").style.width = "0";
 });
 
-document.querySelector(".close-menu").addEventListener("click", function(event) {
+document.querySelector(".close-menu").addEventListener("click", function (event) {
     document.querySelector(".menu").style.width = "0";
 });
 
@@ -54,7 +54,7 @@ get(usernameRef).then((snapshot) => {
 
         localStorage.setItem('username', username);
 
-        document.getElementById("pictureInput").addEventListener("change", function(event) {
+        document.getElementById("pictureInput").addEventListener("change", function (event) {
             const file = event.target.files[0];
             handlePictureInput(file, userData);
         });
@@ -62,11 +62,11 @@ get(usernameRef).then((snapshot) => {
         function handlePictureInput(file) {
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function() {
+                reader.onload = function () {
                     const imageDataUrl = reader.result;
 
                     const image = new Image();
-                    image.onload = function() {
+                    image.onload = function () {
                         const imgURL = reader.result;
                         userData.ImageURL = imgURL;
                         console.log(imgURL);
@@ -81,12 +81,12 @@ get(usernameRef).then((snapshot) => {
             }
         }
 
-        document.getElementById("pictureInput").addEventListener("change", function(event) {
+        document.getElementById("pictureInput").addEventListener("change", function (event) {
             const file = event.target.files[0];
             handlePictureInput(file);
         });
 
-        document.querySelector(".uploadImage").addEventListener("click", function(event) {
+        document.querySelector(".uploadImage").addEventListener("click", function (event) {
             const pictureName = document.querySelector(".pictureName").value;
             if (!pictureName) {
                 alert("Please provide a name for the picture.");
@@ -132,40 +132,40 @@ get(usernameRef).then((snapshot) => {
 
         const userPhotosRef = ref(database, `users/${uniqueUsername}/photos`);
         get(userPhotosRef)
-        .then((snapshot) => {
-            if (snapshot.exists()) {
-                const photosData = snapshot.val();
-                const photoObjects = Object.values(photosData);
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const photosData = snapshot.val();
+                    const photoObjects = Object.values(photosData).reverse(); // Reverse order
 
-                photosContainer.innerHTML = ""; // Clear previous photos
+                    photosContainer.innerHTML = ""; // Clear previous photos
 
-                photoObjects.forEach((photoObject) => {
-                    if (photoObject.ImageURL) {
-                        const photoDiv = document.createElement("div");
-                        photoDiv.className = "photo areal-photo photoMax";
-                        photoDiv.style.backgroundImage = `url(${photoObject.ImageURL})`;
-                        photosContainer.appendChild(photoDiv);
-                    } else {
-                        console.error("Invalid photo object:", photoObject);
-                    }
-                });
+                    photoObjects.forEach((photoObject) => {
+                        if (photoObject.ImageURL) {
+                            const photoDiv = document.createElement("div");
+                            photoDiv.className = "photo areal-photo photoMax";
+                            photoDiv.style.backgroundImage = `url(${photoObject.ImageURL})`;
+                            photosContainer.appendChild(photoDiv);
+                        } else {
+                            console.error("Invalid photo object:", photoObject);
+                        }
+                    });
 
-                document.querySelectorAll(".photo img").forEach((imgElement) => {
-                    if (imgElement && imgElement.parentElement) {
-                        imgElement.parentElement.style.display = "inline-block";
-                    }
-                });
-            } else {
-                console.log("No photos available for this user.");
-            }
-        })
-        .catch((error) => {
-            console.error("Error getting user photos: ", error);
-        });
+                    document.querySelectorAll(".photo img").forEach((imgElement) => {
+                        if (imgElement && imgElement.parentElement) {
+                            imgElement.parentElement.style.display = "inline-block";
+                        }
+                    });
+                } else {
+                    console.log("No photos available for this user.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error getting user photos: ", error);
+            });
 
-        document.querySelector(".photo-content").addEventListener("click", function(event) {
+        document.querySelector(".photo-content").addEventListener("click", function (event) {
             if (this.innerHTML == "") {
-                document.querySelector(".photo-content").addEventListener("click", function(event) {
+                document.querySelector(".photo-content").addEventListener("click", function (event) {
                     console.log("Restoring grid view");
                     window.location.reload();
                 });
@@ -178,5 +178,5 @@ get(usernameRef).then((snapshot) => {
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
-    window.location.href='https://www.lancherix.com/'
+    window.location.href = 'https://www.lancherix.com/'
 });
