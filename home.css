@@ -361,6 +361,11 @@ body {
   background-color: #09191f;
 }
 
+.myPhoto:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
 .chats {
   width: 100%;
   height: 56%;
