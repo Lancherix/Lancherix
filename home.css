@@ -669,8 +669,8 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   border-top: 1px solid #393e46;
-  padding-top: 30%;
-  padding-bottom: 30%;
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 
 .days div:hover {
