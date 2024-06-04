@@ -189,16 +189,15 @@ body {
 
 .sub-hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   padding: 3%;
   padding-top: 0;
   width: 94%;
-  height: 69vh;
+  overflow: auto;
 }
 
 .subHero {
-  width: 100%;
   height: 50%;
   display: flex;
   flex-direction: row;
@@ -276,14 +275,15 @@ body {
 .subImg {
   display: flex;
   flex-direction: column;
-  width: 28%;
-  height: 75%;
+  width: 75vw;
+  height: 100%;
   background: linear-gradient(90deg, rgba(0,155,255,1) 0%, rgba(0,76,224,1) 50%, rgba(0,13,55,1) 100%);
   transition: 0.2s;
   border-radius: 10px;
   justify-content: center;
   padding: 2%;
   color: white;
+  margin-right: 5%;
 }
 
 .subImg:hover {
@@ -294,6 +294,10 @@ body {
 
 .subImg h2 {
   margin-bottom: 5%;
+}
+
+.subIm2 {
+  display: none;
 }
 
 .play {
@@ -741,6 +745,10 @@ a:hover {
   
   .subImg h2 {
     margin-bottom: 5%;
+  }
+
+  .subIm2 {
+    display: flex;
   }
   
   .play {
