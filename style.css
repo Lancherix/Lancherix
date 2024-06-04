@@ -267,6 +267,7 @@ body {
 .top-sub-hero {
   margin-top: 5%;
   margin-bottom: 5%;
+  display: none;
 }
 
 .bottom-sub-hero {
@@ -721,6 +722,7 @@ a:hover {
   .top-sub-hero {
     margin-bottom: 1%;
     margin-top: 0;
+    display: flex;
   }
   
   .bottom-sub-hero {
