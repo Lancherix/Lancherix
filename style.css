@@ -702,6 +702,7 @@ a:hover {
   
   .appDesc {
     font-size: 2rem;
+    text-align: start;
   }
   
   .top-sub-hero {
