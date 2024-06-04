@@ -389,7 +389,7 @@ footer {
 
 .global-footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -397,12 +397,10 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  white-space: nowrap;
 }
 
-.global-footer__left {
-  width: 40%;
-  justify-content: end;
+.global-footer__right {
+  white-space: nowrap;
 }
 
 .global-footer__links {
@@ -418,6 +416,7 @@ footer {
   flex-direction: row;
   justify-content: end;
   align-items: center;
+  width: auto;
 }
 
 .footerLink {
@@ -427,6 +426,7 @@ footer {
 }
 
 .footerLink1 {
+  margin-left: 0;
   margin-right: 6%;
 }
 
@@ -871,6 +871,7 @@ a:hover {
   }
   
   .footerLink1 {
+    margin-left: 3%;
     margin-right: 6%;
   }
   
