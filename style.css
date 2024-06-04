@@ -265,11 +265,13 @@ body {
 }
 
 .top-sub-hero {
-  margin-bottom: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .bottom-sub-hero {
-  margin-top: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .subImg {
@@ -718,10 +720,12 @@ a:hover {
   
   .top-sub-hero {
     margin-bottom: 1%;
+    margin-top: 0;
   }
   
   .bottom-sub-hero {
     margin-top: 1%;
+    margin-bottom: 0;
   }
   
   .subImg {
