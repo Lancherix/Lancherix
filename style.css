@@ -226,6 +226,10 @@ body {
   margin-bottom: 3%;
 }
 
+.notesDescription, .calendarDescription {
+  flex-direction: column-reverse;
+}
+
 .appMock {
   height: 30%;
 }
