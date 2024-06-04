@@ -233,21 +233,22 @@ body {
 .appContent {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 60vh;
+  width: 90%;
 }
 
 .appLogotype {
   display: flex;
   flex-direction: column;
-  height: 20%;
+  height: 45%;
   width: 100%;
   align-items: center;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
 }
 
 .appLogo {
-  height: 70%;
+  height: 20vh;
+  margin-bottom: 5%;
 }
 
 .appLogotype h1 {
@@ -256,7 +257,7 @@ body {
 }
 
 .appDesc {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -693,6 +694,7 @@ a:hover {
   .appLogo {
     height: 100%;
     margin-right: 3.5%;
+    margin-bottom: 0%;
   }
   
   .appLogotype h1 {
