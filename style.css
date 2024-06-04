@@ -327,6 +327,7 @@ body {
   font-size: 3rem;
   margin-bottom: 1%;
   text-align: center;
+  width: 90%;
 }
 
 .mainDescription {
@@ -336,6 +337,7 @@ body {
   font-weight: 500;
   margin-bottom: 1%;
   text-align: center;
+  width: 80%;
 }
 
 .mainImg {
@@ -781,6 +783,7 @@ a:hover {
     font-weight: 700;
     font-size: 4rem;
     margin-bottom: 1%;
+    width: 100%;
   }
   
   .mainDescription {
@@ -789,6 +792,7 @@ a:hover {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1%;
+    width: 100%;
   }
   
   .mainImg {
