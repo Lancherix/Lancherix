@@ -399,8 +399,8 @@ footer {
   align-items: center;
 }
 
-.global-footer__right {
-  white-space: nowrap;
+.global-footer__left {
+  justify-content: center;
 }
 
 .global-footer__links {
@@ -428,6 +428,7 @@ footer {
 .footerLink1 {
   margin-left: 0;
   margin-right: 6%;
+  white-space: nowrap;
 }
 
 .footerLink3 {
