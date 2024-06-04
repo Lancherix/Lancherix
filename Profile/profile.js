@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCQSHcf3H3a9mQ1o7Fl0HY_jQW_mXsLkPE",
-  AIzaSyCQSHcf3H3a9mQ1o7Fl0HY_jQW_mXsLkPEauthDomain: "lancherix-53104.firebaseapp.com",
-  projectId: "lancherix-53104",
-  storageBucket: "lancherix-53104.appspot.com",
-  messagingSenderId: "583309405095",
-  appId: "1:583309405095:web:9cb478100805159f46e482"
+    apiKey: "AIzaSyCQSHcf3H3a9mQ1o7Fl0HY_jQW_mXsLkPE",
+    AIzaSyCQSHcf3H3a9mQ1o7Fl0HY_jQW_mXsLkPEauthDomain: "lancherix-53104.firebaseapp.com",
+    projectId: "lancherix-53104",
+    storageBucket: "lancherix-53104.appspot.com",
+    messagingSenderId: "583309405095",
+    appId: "1:583309405095:web:9cb478100805159f46e482"
 };
 
 // Initialize Firebase
@@ -37,7 +37,7 @@ get(usernameRef).then((snapshot) => {
         const imgURL = userData.ImageURL;
 
         profilePicture.src = imgURL;
-        
+
         const name = userData.firstname + " " + userData.lastname;
         const usernameData = "@" + username;
         const email = userData.email;
@@ -47,7 +47,7 @@ get(usernameRef).then((snapshot) => {
         const links = userData.links;
         const phone = userData.phone;
         const country = userData.country;
-        
+
         nameI.innerHTML = name;
         usernameI.innerHTML = usernameData;
         emailI.innerHTML = email;
@@ -63,9 +63,14 @@ get(usernameRef).then((snapshot) => {
         localStorage.setItem('username', username);
     } else {
         console.log("No data available");
-        window.location.href='https://www.lancherix.com/'
+        window.location.href = 'https://www.lancherix.com/'
     }
 }).catch((error) => {
     console.error("Error getting username: ", error);
-    window.location.href='https://www.lancherix.com/'
+    window.location.href = 'https://www.lancherix.com/'
+});
+
+document.querySelector(".logOut").addEventListener("click", function (event) {
+  localStorage.clear();
+  window.location.href = 'https://www.lancherix.com/';
 });

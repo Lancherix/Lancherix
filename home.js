@@ -99,7 +99,6 @@ get(usernameRef).then((snapshot) => {
         console.log("Username from localStorage:", uniqueUsername);
         console.log("Email from localStorage:", uniqueEmail);
         console.log("No data available");
-        alert("TNo data available");
         window.location.href='https://www.lancherix.com/'
     }
 }).catch((error) => {

@@ -203,3 +203,8 @@ get(usernameRef).then((snapshot) => {
   console.error("Error getting username: ", error);
   window.location.href='https://www.lancherix.com/'
 });
+
+document.querySelector(".logOut").addEventListener("click", function(event) {
+  localStorage.clear();
+  window.location.href='https://www.lancherix.com/';
+});
