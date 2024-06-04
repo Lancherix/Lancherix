@@ -178,14 +178,13 @@ body {
 
 .sub-sub-hero {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   margin-top: 1%;
   margin-bottom: 3%;
   background-image: url("Images/fondoLogoDefinitivo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .sub-hero {
