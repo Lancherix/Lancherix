@@ -286,7 +286,7 @@ body {
   justify-content: center;
   padding: 2%;
   color: white;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .subImg:hover {
@@ -741,6 +741,7 @@ a:hover {
     justify-content: center;
     padding: 2%;
     color: white;
+    margin-right: 0;
   }
   
   .subImg:hover {
