@@ -39,6 +39,7 @@ body {
   margin-bottom: 5%;
   height: auto;
   display: block;
+  max-height: 16%;
 }
 
 input {
